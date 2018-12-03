@@ -1,0 +1,374 @@
+body{
+	font-family: 'Work Sans', sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	margin:  0 auto;
+	position: relative;	 
+}
+/******************* Forsíða  ********************/
+/*************************************************/
+/*Banner 1*/
+.hero-img{
+	background-color: grey;
+	background-image: url(../img/banner-1.jpg);
+	background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height:100vh;	
+}
+.hero-content{
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-direction: column; 
+	margin: 0 auto;
+	align-items: center; 
+	justify-content: center;
+}
+.hero-content h1{
+	color:#fff;
+	text-align: center;
+}
+/*icond Örin*/
+section .fa-angle-down{
+	color: #fff;
+	font-size: 20px;
+}
+/* ALLAR HERO myndir*/
+.hero-ad.one{
+	background-color: #fff;
+	background-image: url(../img/banner-3.jpg);
+}
+.hero-ad.two{
+	
+	background-image: url(../img/banner-2.jpg);	
+}
+.hero-valin-syning{
+	background-color: #fff;
+	background-image: url(../img/banner-valin-syning.jpg)
+
+}
+.hero-ad,.hero-valin-syning{
+	height: 100vh;
+	background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*banner mynd fyrir mobile*/
+.mobile-banner{
+	display: none;
+}
+/*content á banner 2 & 3*/
+.hero-ad-container{
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+.hero-ad-container.second{
+	display: flex;
+	justify-content:flex-end;
+	width: 90%;
+}
+.hero-ad-content{
+	width: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+.hero-ad-content.second{
+	color:#fff;
+}
+.hero-ad-content p{
+	padding-top: 40px;
+	text-align: left;
+	position: relative;
+}
+.texti-med-linu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+.texti-med-linu:after{
+	position: absolute;
+	content:'';
+	width: 40%;
+	border-bottom: solid 1px #AF1F44;
+	top:15%;	
+}
+.hero-ad-content.kaupa-btn{
+	padding-top: 40px;
+}
+/* hringekja*/
+#cards{
+    display: flex;
+    width:500px;
+    height: 300px;
+    overflow: hidden;
+} 
+#movable{
+    transition: all 2s;
+    display: flex;
+    position: relative;
+}
+
+/**** Cards ******/
+.cards-frontpage-container{
+	width: 85%;
+	margin:0 auto;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.cards-frontpage-container h3{
+	padding-bottom: 40px;
+}
+.cards-container{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.card{
+	min-width: 320px;
+	margin: 16px;
+	min-height: 400px;	
+	position: relative;
+}
+.card img{
+	width:100%;
+	height:100%;
+	position: relative;
+}
+.hover-slide{
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	opacity: 0;
+}
+.hover-slide:hover{
+	opacity: 1;
+}
+
+
+.card h4{
+	position: absolute;
+	bottom:24px;
+	left:24px;
+	color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+}
+.cards-frontpage-container p{
+	text-align: center;
+}
+/**** Tjarnarbarinn ******/
+.tjarnarbarinn-img{
+	width: 480px; 
+	height: 704px;
+}
+.tjarnabarinn-container{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	margin: 0 auto;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 80px;
+}
+
+/******************* Syningar ********************/
+/*************************************************/
+
+.syninga-btn-container{
+	width: 100%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 40px;
+}
+.syningar-nav{
+	display:flex;
+	flex-direction: row;
+	width: 60%;
+}
+.syningar-nav h3{
+	padding-right:32px;
+}
+
+/******************* Dagatal ********************/
+/*************************************************/
+
+.calendar-container{
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.calendar-filter-container{
+	width: 100%;
+	height: 40px;
+	border: solid 1px #000;
+	display: flex;
+	align-items: center;
+}
+.calendar-filter{
+	width:80%;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+}
+.filter{
+	display: flex;
+	flex-direction: row;
+}
+.dates,.shows{
+	width: 27.5%;
+}
+.what-time,.time, .price{
+	width: 15%;
+}
+.calander-filter.fa-angle-down{
+	color:#000;
+}
+.filter-result{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.show-info{
+	width: 80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+/******************* Valin syning ********************/
+/*************************************************/
+
+/* Hero content */
+.hero-valin-syning .hero-info{
+	padding-top: 40px;
+	color:#fff;
+	display: flex;
+	width: 65%;
+	height: 40px;
+	margin: 0 auto;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.lina-1{
+	width: 1px;
+    background-color: #AF1F44;
+    height: 100%;     
+}
+/******** Sýningar content ******/
+.syninga-info-container{
+	width: 80%;
+	margin: 0 auto;
+}
+.syninga-info-content{
+	padding-top: 80px;
+	width: 70%;
+	margin: 0 auto;
+}
+.syninga-info-content h5{
+	padding-bottom: 40px;
+}
+.syninga-info-content p{
+	padding-bottom: 40px;
+}
+.lina-2{
+	margin: 0 auto;
+	width: 240px;
+    background-color: #AF1F44;
+    height: 1px;   
+}
+.content-box2{
+	padding-top: 40px;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.content-box2 span{
+	color:#AF1F44;
+}
+/* mini calendar */
+.mini-calendar{
+	min-width: 300px;
+	max-width: 340px;
+	height: 234px;
+}
+.month{
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.weekdays{
+	width: 100%;
+}
+.weekdays li{
+	display: inline-block;
+    width:calc(300px/7);
+    text-align: center;
+}
+.days li{
+    display: inline-block;
+   	width:calc(300px/7);
+    text-align: center;
+    
+}	
+/******************* Media Queries max-width:800********************/
+/*************************************************/
+
+/*Forsíða*/
+
+@media screen and (max-width: 800px){
+	.hero-ad{
+		height: 100%;
+		margin: 0 auto;
+	}
+	.hero-ad-content{
+		width: 95%;
+		margin: 0 auto;
+	}
+	.hero-ad-content h2{
+		padding-top:40px;
+		padding-bottom: 16px;
+	}
+	.hero-ad.one,.two{
+		background-image:none!important;
+		background-color: #fff;
+	}
+	.hero-ad-content.second{
+		color:#000!important;
+	}
+	.mobile-banner{
+		margin: 0 auto;
+		display: block;
+		width: 95%;
+		height: auto;
+	}
+	.tjarnarbarinn-img{
+		width: 95%; 
+		height: auto;
+}
+	.tjarnabarinn-container{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		margin: 0 auto;	
+}
+
+
+}
