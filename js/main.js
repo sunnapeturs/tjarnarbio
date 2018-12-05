@@ -1,8 +1,4 @@
 
-// Mobile Menu
-var mobileMenu = document.querySelector('.mobile-menu');
-var close = document.querySelector('.fa-times');
-var hamburgerIcon = document.querySelector('.mobile');
 //Cards
 var cardContainer = document.querySelector('.cards-container');
 var iSyninguBtn = document.querySelector('.i-syningu');
@@ -68,74 +64,84 @@ var cards =[
 }
 
 ]
-iSyninguBtn.onclick = function(){
-	show_focus = "now_showing";
-	show()
+// Kortin 3, "í sýningu"
+try{
+for(var i = 0; i < 3; i++){
+	cardContainer.innerHTML +=`
+			<div class="card i-syningu">
+				<img src="${cards[i].img}">
+				<div class="hover-slide"></div>
+				<h4>${cards[i].names}</h4>			
+			</div>	`
 }
-vidburdirBtn.onclick = function(){
-	show_focus = "events";
-	show()
-}
-leikarBtn.onclick = function(){
-	show_focus = "all";
-	show()
-}
-window.addEventListener("load", function () {
-	show();
-}, false);
-// loopar í gegnum array og rúllar í hverju load
-var show = function(){
-	cardContainer.innerHTML = "";
-	if(show_focus==="now_showing"){	
-		for(var i = 0; i < cards.length; i++){		
-			if(cards[i].now_showing){
-				cardContainer.innerHTML +=`
-						<div class="card i-syningu">		
-								<img src="${cards[i].img}">
-								<div class="hover-slide"></div>		
-								<h4>${cards[i].names}</h4>			
-						</div>
-				`
-				}	
-		}
-	}else if(show_focus==="events"){
-		for(var i = 0; i < cards.length; i++){		
-			if(cards[i].other_event){
-				cardContainer.innerHTML +=`
-						<div class="card i-syningu">		
-								<img src="${cards[i].img}">
-								<div class="hover-slide"></div>		
-								<h4>${cards[i].names}</h4>			
-						</div>
-				`
-				}	
-		}
-	} else {
-		for(var i = 0; i < cards.length; i++){		
-			if(!(cards[i].other_event)){
-				cardContainer.innerHTML +=`
-						<div class="card i-syningu">		
-								<img src="${cards[i].img}">
-								<div class="hover-slide"></div>		
-								<h4>${cards[i].names}</h4>			
-						</div>
-				`
-				}	
-		}	
-	}	
-}
-//hringekja
-
-
-//Mobile Menu
-try {
-hamburgerIcon.onclick = function(){ 
-	mobileMenu.classList.add("show-menu"); 
-}
-close.onclick = function(){
-	mobileMenu.classList.remove("show-menu");
-}
-} catch(err){
+}catch(err){
 	console.log(err);
 }
+
+
+    
+
+
+
+	
+	iSyninguBtn.onclick = function(){
+		show_focus = "now_showing";
+		show()
+	}
+	vidburdirBtn.onclick = function(){
+		show_focus = "events";
+		show()
+	}
+	leikarBtn.onclick = function(){
+		show_focus = "all";
+		show()
+	}
+
+	document.addEventListener("DOMContentLoaded", function(){
+  	show();
+	});
+	// loopar í gegnum array og rúllar í hverju load
+	var show = function(){
+		cardContainer.innerHTML = "";
+		if(show_focus==="now_showing"){	
+			for(var i = 0; i < cards.length; i++){		
+				if(cards[i].now_showing){
+					cardContainer.innerHTML +=`
+							<div class="card i-syningu">		
+									<img src="${cards[i].img}">
+									<div class="hover-slide"></div>		
+									<h4>${cards[i].names}</h4>			
+							</div>
+					`
+					}	
+			}
+		}else if(show_focus==="events"){
+			for(var i = 0; i < cards.length; i++){		
+				if(cards[i].other_event){
+					cardContainer.innerHTML +=`
+							<div class="card i-syningu">		
+									<img src="${cards[i].img}">
+									<div class="hover-slide"></div>		
+									<h4>${cards[i].names}</h4>			
+							</div>
+					`
+					}	
+			}
+		} else {
+			for(var i = 0; i < cards.length; i++){		
+				if(!(cards[i].other_event)){
+					cardContainer.innerHTML +=`
+							<div class="card i-syningu">		
+									<img src="${cards[i].img}">
+									<div class="hover-slide"></div>		
+									<h4>${cards[i].names}</h4>			
+							</div>
+					`
+					}	
+			}	
+		}	
+	}
+
+
+
 

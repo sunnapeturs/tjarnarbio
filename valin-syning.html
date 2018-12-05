@@ -10,21 +10,32 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/styleguide.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
 <!-- Nav-->
 	<header>
-		<nav class="nav-container">
-			<a href="index.html"><img class="logo" src="img/TB-logo.svg" alt="Tjarnarbíó logo" title="Tjarnarbíó Logo"></a>
-			<ul class="top-nav">
-				<li><a href="">Sýningar</a></li>
-				<li><a href="">Dagatal</a></li>
-				<li><a href="">Tjarnarkortin</a></li>
-				<li><a href="">Um okkur</a></li>
-				<li><a href=""><i class="fas fa-search"></i></a></li>
-				<li><a href="">Eng</a></li>
-			</ul>
-		</nav>
+		<div id="global-nav">
+			<nav class="nav-container">
+				<a href="index.html"><img class="logo" src="img/tjarnarbio_logo_hires.transparency.white.png" alt="Tjarnarbíó logo" title="Tjarnarbíó Logo"></a>
+				<a href="index.html"><img class="logo-scrolled" src="img/TB-logo.svg" alt="Tjarnarbíó logo" title="Tjarnarbíó Logo"></a>
+				<ul class="top-nav">
+					<li class="desktop"><a href="">Sýningar</a></li>
+					<li class="desktop"><a href="">Dagatal</a></li>
+					<li class="desktop"><a href="">Tjarnarkortin</a></li>
+					<li class="desktop"><a href="">Um okkur</a></li>
+					<li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
+					<li class="desktop"><a href="">Eng</a></li>
+				</ul>
+				<div class="mobile"><i class="fas fa-bars"></i></div>
+				</nav>
+				
+			
+		<div>
+			<div class="mobile-menu">
+					<i class="fas fa-times"></i>
+					<div class="menu-content"></div>	
+				</div>
 	</header>
 <!--  Hero Content -->
 
@@ -35,9 +46,9 @@
 				<p><span>Verð: 3.500kr.</span></p>
 				<div class="lina-1"></div>
 				<p><span>Lengd: 50 mín.</span></p>
-				<div class="line"></div>
+				<div class="lina-1"></div>
 				<p><span>Frumsýning: 25. nóv.</span></p>
-				<div class="line"></div>
+				<div class="lina-1"></div>
 				<button class="kaupa-btn">Kaupa miða</button>
 			</div>
 		</div>
@@ -94,13 +105,13 @@
 						  <li>13</li>
 						  <li>14</li>
 						  <li>15</li>
-						  <li><span class="active">16</span></li>
+						  <li><div class="active-background"><div class="active">16</div></div></li>
 						  <li>17</li>
 						  <li>18</li>
 						  <li>19</li>
 						  <li>20</li>
-						  <li><span class="active">21</span></li>
-						  <li><span class="active">21</span></li>
+						  <li><div class="active-background"><div class="active">16</div></div></li>
+						  <li><div class="active-background"><div class="active">16</div></div></li>
 						  <li>23</li>
 						  <li>24</li>
 						  <li>25</li>
@@ -118,11 +129,49 @@
 					<p>„Eitt besta útskriftarverkefni sem ég hef séð í minni tíð.“– Stefán Jónsson, leikstjóri</p>
 					<button class="kaupa-btn">Kaupa miða</button>
 				</div>
+
+				<div class="img-content img-display-container">
+					<img class="mySlides" src="img/5.jpg">
+					<img class="mySlides" src="img/6.jpg">
+
+  		  			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  					<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+				</div>
+
+						<script>
+						var slideIndex = 1;
+						showDivs(slideIndex);
+
+						function plusDivs(n) {
+						  showDivs(slideIndex += n);
+						}
+
+						function showDivs(n) {
+						  var i;
+						  var x = document.getElementsByClassName("mySlides");
+						  if (n > x.length) {slideIndex = 1}    
+						  if (n < 1) {slideIndex = x.length}
+						  for (i = 0; i < x.length; i++) {
+						     x[i].style.display = "none";  
+						  }
+						  x[slideIndex-1].style.display = "block";  
+						}
+						</script>
+
+
 			</div>		
+		</div>
+		<!-- Img container -->
 		
 
+		
+		<!-- Cards-->
+		<div class="cards-frontpage-container">
+			<h3>Í sýningu</h3>
+		<!-- cards koma inn með JS-->
+			<div class="cards-container"></div>
+			<p><span>Sjá allar sýningar</span></p>
 		</div>
-
 	</section>
 	
 
@@ -164,5 +213,7 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/cards.js" type="text/javascript"></script>
+    <script src="js/navigation.js" type="text/javascript"></script>
 </body>
 </html>

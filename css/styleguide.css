@@ -48,6 +48,10 @@ p span{
 	top:7%;
 	left: 5%;
 }
+.logo-fixed{
+	height: 50px;
+	width: auto;
+}
 header .nav-container{
 	width: 90%;
 	height: 70px;
@@ -61,6 +65,12 @@ header .nav-container{
 header .desktop a{
 	color:#fff;
 	font-weight: 600;
+}
+.scrolled-nav .desktop a:hover{
+	color:#AF1F44;
+}
+header .desktop a:hover{
+	color:#AF1F44;
 }
 .fa-bars{
 	color:#fff;
@@ -86,15 +96,17 @@ header .top-nav{
 }
 .mobile{
 	display: none;
-
 }
  .mobile-menu{
  	right:0;
-	background-color:red;
+	background-image: url(../img/banner-1.jpg);
+	background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
 	position: absolute;
 	width: 0;
 	height: 100vh;
-	top: 0px;
+	top: 0;
 	opacity: 0;
  }
 .show-menu{	
@@ -103,12 +115,17 @@ header .top-nav{
 }
  .fa-times{
  	position: absolute;
- 	right:16px;
+ 	right:24px;
  	color:#fff;
  	font-size: 24px;
- 	top:16px;
+ 	top:24px;
  	cursor: pointer;
  }
+ .mobile-menu a{
+ 	color:#fff;
+ }
+
+
 /******************* Takkar *****************/
 .kaupa-btn{
 	display: flex;

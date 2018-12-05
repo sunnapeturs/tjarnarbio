@@ -101,19 +101,6 @@ section .fa-angle-down{
 .hero-ad-content.kaupa-btn{
 	padding-top: 40px;
 }
-/* hringekja*/
-#cards{
-    display: flex;
-    width:500px;
-    height: 300px;
-    overflow: hidden;
-} 
-#movable{
-    transition: all 2s;
-    display: flex;
-    position: relative;
-}
-
 /**** Cards ******/
 .cards-frontpage-container{
 	width: 85%;
@@ -156,8 +143,6 @@ section .fa-angle-down{
 .hover-slide:hover{
 	opacity: 1;
 }
-
-
 .card h4{
 	position: absolute;
 	bottom:24px;
@@ -203,7 +188,9 @@ section .fa-angle-down{
 .syningar-nav h3{
 	padding-right:32px;
 }
-
+.syningar-nav div:hover{
+	color: #AF1F44;
+}
 /******************* Dagatal ********************/
 /*************************************************/
 
@@ -232,6 +219,11 @@ section .fa-angle-down{
 .dates,.shows{
 	width: 27.5%;
 }
+
+.shows.filter{
+	margin-left:-24px;
+
+}
 .what-time,.time, .price{
 	width: 15%;
 }
@@ -242,6 +234,7 @@ section .fa-angle-down{
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	padding: 20px 0;
 }
 .show-info{
 	width: 80%;
@@ -250,6 +243,37 @@ section .fa-angle-down{
 	justify-content: space-between;
 	align-items: center;
 }
+.show-info .dates{
+	font-size: 36px;
+	font-weight: 300;
+	padding-left: 40px;
+	
+}
+.show-info .day{
+	font-size: 12px;
+	padding-top: 16px;
+	text-align: center;
+}
+.dates.filter{
+	padding-left: 24px;
+}
+/* Prufa með panel*/
+.panel{
+    width: 400px;
+    height: 80px;
+    background-color: red;
+    display: none;
+    overflow: hidden;
+}
+.header-banner{
+	width: 100%;
+	height: 350px;
+	background-image: url(../img/bannerDagatal.jpg);
+	background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /******************* Valin syning ********************/
 /*************************************************/
 
@@ -286,11 +310,14 @@ section .fa-angle-down{
 .syninga-info-content p{
 	padding-bottom: 40px;
 }
-.lina-2{
+.lina-2,.lina-3{
 	margin: 0 auto;
 	width: 240px;
     background-color: #AF1F44;
     height: 1px;   
+}
+.lina-3{
+	margin-bottom: 40px;
 }
 .content-box2{
 	padding-top: 40px;
@@ -303,31 +330,77 @@ section .fa-angle-down{
 }
 /* mini calendar */
 .mini-calendar{
-	min-width: 300px;
-	max-width: 340px;
+	width: 350px;	
 	height: 234px;
 }
 .month{
 	width: 100%;
+	padding-bottom: 16px;
 	text-align: center;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
+.mini-calendar .fas{
+	padding: 0 8px;
+}
 .weekdays{
 	width: 100%;
+	color:#AF1F44;
+	font-weight: 400;
 }
 .weekdays li{
 	display: inline-block;
     width:calc(300px/7);
     text-align: center;
+    padding-bottom: 8px;  
 }
 .days li{
     display: inline-block;
    	width:calc(300px/7);
-    text-align: center;
-    
-}	
+    text-align: center; 
+    padding-bottom: 8px;  
+}
+li div .active{
+	color:#fff;
+	font-weight: 400;
+	position:absolute;
+	top: 4px;
+	left:4px;
+	
+}
+.active-background{
+	position: relative;
+	height: 25px;
+ 	width: 25px;
+ 	background-color: #AF1F44;
+ 	border-radius: 50%;
+ 	display: inline-block;
+ 	top: 8px;
+ 	margin-top: -8px;
+}
+.content-box3{
+	text-align: center;
+	font-style: italic;
+	width: 80%;
+	margin: 0 auto;
+	padding-bottom: 40px;
+}
+.content-box3 button{
+	float:right;
+}
+/* hringekja */
+.img-display-container{
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 80px;		
+}
+
+.mySlides{
+	width: 100%;
+	display: none;
+}
+
 /******************* Media Queries max-width:800********************/
 /*************************************************/
 
