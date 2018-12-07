@@ -7,67 +7,66 @@ var leikarBtn = document.querySelector('.leikar');
 var show_focus = "now_showing";
 var cards =[
 {
-	names:'Svartlyng',
+	names:'svartlyng',
 	other_event:false,
 	img:'img/cards/1.png',
 	now_showing:true
 },{
-	names:'Sol',
+	names:'sol',
 	other_event:false,
 	img:'img/cards/2.png',
 	now_showing:true
 },{
-	names:'Tómir vasar',
+	names:'tómir vasar',
 	other_event:false,
 	img:'img/cards/3.png',
 	now_showing:true
 },{
-	names:'Crescendo',
+	names:'crescendo',
 	other_event:false,
 	img:'img/cards/4.png',
 	now_showing:true
 },{
-	names:'Rejúníon',
+	names:'rejúníon',
 	other_event:false,
 	img:'img/cards/5.png',
 	now_showing:true
 },{
-	names:'The Vallay',
+	names:'the vallay',
 	other_event:false,
 	img:'img/cards/6.png',
 	now_showing:true
 },{
-	names:'Hafið bláa',
+	names:'hafið bláa',
 	other_event:true,
 	img:'img/cards/7.png',
 	now_showing:false
 },{
-	names:'Persónur',
+	names:'persónur',
 	other_event:false,
 	img:'img/cards/8.png',
 	now_showing:true
 },{
-	names:'Svartlyng',
+	names:'svartlyng',
 	other_event:false,
 	img:'img/cards/9.png',
 	now_showing:true
 },{
-	names:'Persónur2',
+	names:'persónur2',
 	other_event:false,
 	img:'img/cards/8.png',
 	now_showing:false
 },{
-	names:'Svartlyng2',
+	names:'svartlyng2',
 	other_event:false,
 	img:'img/cards/9.png',
 	now_showing:false
 }
-
 ]
 // Kortin 3, "í sýningu"
 for(var i = 0; i < 3; i++){
 	cardContainer.innerHTML +=`
-			<div class="card i-syningu">
+			<div class="card">
 				<img src="${cards[i].img}">
 				<div class="hover-slide"></div>
 				<h4>${cards[i].names}</h4>			

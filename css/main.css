@@ -40,7 +40,6 @@ section .fa-angle-down{
 	background-image: url(../img/banner-3.jpg);
 }
 .hero-ad.two{
-	
 	background-image: url(../img/banner-2.jpg);	
 }
 .hero-valin-syning{
@@ -102,6 +101,7 @@ section .fa-angle-down{
 	padding-top: 40px;
 }
 /**** Cards ******/
+
 .cards-frontpage-container{
 	width: 85%;
 	margin:0 auto;
@@ -121,9 +121,9 @@ section .fa-angle-down{
 	flex-wrap: wrap;
 }
 .card{
-	min-width: 320px;
+	width: 320px;
 	margin: 16px;
-	min-height: 400px;	
+	height: 400px;	
 	position: relative;
 }
 .card img{
@@ -168,10 +168,8 @@ section .fa-angle-down{
 	align-items: center;
 	padding-bottom: 80px;
 }
-
 /******************* Syningar ********************/
 /*************************************************/
-
 .syninga-btn-container{
 	width: 100%;
 	margin: 0 auto;
@@ -188,9 +186,11 @@ section .fa-angle-down{
 .syningar-nav h3{
 	padding-right:32px;
 }
-.syningar-nav div:hover{
-	color: #AF1F44;
+
+.syningar-nav div:hover,.syning-active-btn,.vidburdir-active-btn,.leikar-active-btn{
+	color:#AF1F44;
 }
+
 /******************* Dagatal ********************/
 /*************************************************/
 
@@ -220,9 +220,21 @@ section .fa-angle-down{
 	width: 27.5%;
 }
 
-.shows.filter{
-	margin-left:-24px;
-
+li.shows.filter{
+	margin-left:-60px;
+	position: relative;
+}
+li.shows.filter:after{
+	content: '';
+	width: 1px;
+	height: 40px;
+	background-color: #AF1F44;
+	position: absolute;
+	bottom: -68%;
+    left: -18%;
+}
+button.cal{
+	margin-top:0;
 }
 .what-time,.time, .price{
 	width: 15%;
@@ -242,6 +254,7 @@ section .fa-angle-down{
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	text-transform: uppercase;
 }
 .show-info .dates{
 	font-size: 36px;
@@ -251,20 +264,70 @@ section .fa-angle-down{
 }
 .show-info .day{
 	font-size: 12px;
-	padding-top: 16px;
-	text-align: center;
+    padding-top: 12px;
+    text-align: center;
+    padding-left: 5px;
+    letter-spacing: 1px;
 }
-.dates.filter{
-	padding-left: 24px;
+li.dates.filter{
+	padding-left: 60px;
 }
-/* Prufa með panel*/
+.dates.filter .fas{
+padding: 0 16px;
+}
+.dates.filter .fas:hover{
+	color:#AF1F44;
+}
+/* Prufa með panel */
+.accordion{
+	font-size: 40px;
+	padding-left:-24px;
+	cursor: pointer;
+	position: absolute;
+	left:40%;
+}
+.accordion:hover{
+	color:#AF1F44;
+}
 .panel{
-    width: 400px;
-    height: 80px;
-    background-color: red;
+    width: 100%;
+    height: 216px;
+    background-color: #fff;
     display: none;
     overflow: hidden;
 }
+.panel-container{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.panel-content-holder{
+	width: 80%;
+	display: flex;
+	flex-direction:column;
+}
+.panel-content-holder span{
+	color:#AF1F44;
+}
+.panel-container img{
+	width:270px;
+	height:203px;
+	margin-right: 24px;
+}
+.panel-content-holder button.kaupa-btn{
+	color:#AF1F44;
+	background-color: #fff;
+	border: solid 1px #AF1F44;
+	margin-top: 40px;
+}
+.panel-content-holder button.kaupa-btn:hover{
+	background-color:#AF1F44;
+	border: none;
+	color:#fff;
+}
+/* header fyrir dagatal og sýningar*/
 .header-banner{
 	width: 100%;
 	height: 350px;
@@ -366,8 +429,7 @@ li div .active{
 	font-weight: 400;
 	position:absolute;
 	top: 4px;
-	left:4px;
-	
+	left:4px;	
 }
 .active-background{
 	position: relative;
@@ -393,12 +455,23 @@ li div .active{
 .img-display-container{
 	margin: 0 auto;
 	width: 100%;
-	padding-top: 80px;		
+	padding-top: 80px;
+	position: relative;		
 }
-
 .mySlides{
+	margin: 0 auto;
+	width: 90%;
+	display: none;	
+}
+.mySlidesBtn{
+	display: flex;
+	flex-direction: row;
 	width: 100%;
-	display: none;
+	justify-content: space-between;
+	font-size: 24px;
+	position: absolute;
+	top:55%;
+
 }
 
 /******************* Media Queries max-width:800********************/
@@ -435,13 +508,105 @@ li div .active{
 	.tjarnarbarinn-img{
 		width: 95%; 
 		height: auto;
-}
+	}
 	.tjarnabarinn-container{
 		display: flex;
 		flex-direction: column;
 		width: 90%;
 		margin: 0 auto;	
-}
+	}
+	/*Cards*/
+	.cards-frontpage-container{
+		width: 95%;
+	}
 
+	.cards-container{
+		width: 100%;
+	}
+
+	.cards-container .card{
+		width: 160px;
+		height: 240px;
+	}
+
+	.cards-container img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	/********* Dagatal ***********/
+	.filter-result{
+		position: relative;
+	}
+	.accordion{
+		right: 0;
+		left: 0;
+	}
+	.calendar-container{
+		width: 95%;
+	}
+	.show-info{
+		width: 90%;
+		display: flex;
+		flex-direction: row;
+		justify-content:center;
+	}
+	li.shows.filter{
+		margin-left: 8px;
+	}
+	li.dates.filter{
+		padding-left:0;
+		width: 30%;
+		margin-left: -30px;
+	}
+	.show-info .dates{
+		padding-left:8px;
+	}
+	.calendar-filter .shows.filter,.what-time.filter,.time.filter,.price.filter{
+		display: none;
+	}
+	.dates.filter{
+		width: 100%;
+	}
+	.calendar-filter .dates.filter{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.calendar-filter{
+		width: 100%;
+	}
+	.kaupa-btn.cal{
+		font-size:12px;
+		width: 80px;
+		height: 40px;
+	}
+	/*panel*/
+	.filter-result.panel{
+		height: 100%;
+	}
+	.panel-container{
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	width: 100%;
+    	align-items: center;
+	}
+	.panel-content-holder {
+    	width: 90%;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+	}
+	.panel-container img{
+		margin-bottom: 16px;
+		margin-right:0;
+		width: 100%;
+    	height: auto;
+}
+	}
+	.panel-content-holder button.kaupa-btn{
+		margin-top:24px;
+	}
 
 }

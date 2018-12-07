@@ -7,10 +7,12 @@ var templates ={
 					<ul class="top-nav">
 						<li onclick="showEvents()" id="syningar-nav" class="desktop"><a href="#events">Sýningar</a></li>
 						<li onclick="showCalendar()" id="calendar-nav"class="desktop"><a href="#calendar">Dagatal</a></li>
-						<li class="desktop"><a href="">Tjarnarkortin</a></li>
+						<li onclick="showSingleEvent()" class="desktop"><a href="#event">Tjarnarkortin</a></li>					
 						<li class="desktop"><a href="">Um okkur</a></li>
-						<li class="desktop"><a href=""><i class="fas fa-search"></i></a></li>
 						<li class="desktop"><a href="">Eng</a></li>
+						<li class="desktop"><input onkeydown="search()" id="searchInput" type="text" name="txt" placeholder="Leit"></li>
+						
+				<!-- Mobile menu-->	
 					</ul>
 					<div id="mobile" class="mobile"><i class="fas fa-bars"></i></div>
 				</nav>
@@ -23,7 +25,7 @@ var templates ={
 								<li onclick="showCalendar()" id="calendar-nav"><a href="#calendar">Dagatal</a></li>
 								<li><a href="">Tjarnarkortin</a></li>
 								<li><a href="">Um okkur</a></li>
-								<li><a href=""><i class="fas fa-search"><span>Sláðu inn leitarorð</span</i></a></li>
+								<li class="mobile-search-field"><i class="fas fa-search"></i><span>Sláðu inn leitarorð</span</li>
 							</ul>
 						</div>	
 				</div>`,
@@ -128,10 +130,19 @@ var templates ={
 					<div class="leikar"><h3>Leikárið 2017–2018</h3></div>
 					<div class="vidburdir"><h3>Aðrir Viðburðir</h3></div>
 				</div>
-				<button class="kaupa-btn">Dagatal</button>
+				<button onclick="showCalendar()" class="kaupa-btn">Dagatal</button>
 			</div>
 			<div class="cards-container"></div>	
 		</div>
+		</div`,
+
+	searchResult:`
+		<div class="header-banner"></div>
+		<div class="syningar">
+			<div class="cards-frontpage-container">
+				<h3>Leit</h3>
+				<div class="cards-container"></div>	
+			</div>
 		</div`,
 
 	calendar:`
@@ -146,23 +157,18 @@ var templates ={
 					</div>
 					<div class="shows filter">
 						<h4 >Sýning</h4>
-						<i class="fas fa-angle-down"></i>
 					</div>
 					<div class="what-time filter">
 						<h4>Tími</h4>
-						<i class="fas fa-angle-down"></i>
 					</div>
 					<div class="time filter">
 						<h4>Lengd</h4>
-						<i class="fas fa-angle-down"></i>
 					</div>
 					<div class="price filter">
 					<h4>Verð</h4>
-					<i class="fas fa-angle-down"></i>
 					</div>
 				</div>
 			</div>
 			<div class="calendar-dates"></div>
 		</div>`
-
 }

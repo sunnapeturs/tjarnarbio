@@ -15,3 +15,10 @@ var showCalendar = function(){
 	main.innerHTML = templates.calendar;
 	doCalJs();
 }
+var showSingleEvent = function(){
+	main.innerHTML = eventTemplates.singleEvent;
+	//láta script virka á sér síðu
+	var script = document.createElement("script");
+  	script.src = "./js/cards.js"
+  	document.body.appendChild(script);
+}

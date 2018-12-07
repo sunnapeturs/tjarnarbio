@@ -9,8 +9,5 @@ hamburgerIcon.onclick = function(){
 close.onclick = function(){
 	mobileMenu.classList.remove("show-menu");
 }
-$(document).on('click','.mobile-menu',function(e) {
-    if( $(e.target).is('a') ) {
-        $(this).collapse('hide');
-    }
-});
+
+
