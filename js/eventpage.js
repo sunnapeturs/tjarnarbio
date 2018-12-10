@@ -24,7 +24,7 @@ singleEvent:
 					<div class="lina-2"></div>
 				</div>
 				<div class="content-box2">
-					<p>
+					<p class="credit-list">
 						<span>Handrit og leikstjórn:</span> Matthías Tryggvi Haraldsson.<br>
 						<span>Á sviði:</span> Jörundur Ragnarsson.<br>
 						<span>Dramatúrgía:</span> Eydís Rose Vilmundardóttir,<br>Jökull Smári Jakobsson.<br>

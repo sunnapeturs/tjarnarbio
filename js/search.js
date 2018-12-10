@@ -8,14 +8,20 @@ function search() {
 	for(var i = 0; i < cards.length; i++){
 	var index = cards[i].names.indexOf(searchInput.toLowerCase());
 	
-	if(index !== -1){
-	console.log('kunta')	
+	if(index !== -1){	
 	cardContainer.innerHTML +=`
-			<div class="card i-syningu">
+			<div class="card">
 				<img src="${cards[i].img}">
-				<div class="hover-slide"></div>
+				<div class="hover-slide">
+					<button class="kaupa-btn">Kaupa miða</button>
+					<div class="card-info">
+						<p>${cards[i].leikfelag}</p>
+						<p>${cards[i].date}</p>
+						<p>${cards[i].price}</p>
+					</div>
+				</div>
 				<h4>${cards[i].names}</h4>			
-			</div>	`	
+			</div>`	
 	}
 	else{
 		console.log('no match');

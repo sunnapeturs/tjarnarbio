@@ -6,11 +6,13 @@ h1, h2, h3, h4{
 }
 h1, h2{
 	font-size: 72px;
-	line-height: 90px;
+	line-height: 120%;
 }
 h3{
 	font-size: 18px;
 	font-weight: 700;
+	position: relative;
+
 }
 h4{
 	font-size: 12px;
@@ -154,6 +156,7 @@ header .top-nav{
 	margin-top: 36px;
 }
 /* leit */
+
 input#searchInput{
     background: none;
     border: none;
@@ -168,8 +171,13 @@ input#searchInput{
   font-size: 16px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 700;
+  padding-left: 8px;
 
 }
+.scrolled-nav li.desktop input#searchInput{
+	color:#000;
+}
+
 /******************* Takkar *****************/
 .kaupa-btn{
 	display: flex;
@@ -208,8 +216,7 @@ footer{
 	padding-top: 40px;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-end;
-	
+	align-items: flex-end;	
 }
 footer .contact-info{
 	display:flex;
@@ -232,6 +239,9 @@ footer .fab{
 	flex-direction: row;
 	position: relative;
 }
+.footer-bottom p{
+	margin-bottom: 8px;
+}
 .footer-bottom:after{
 	content:'';
 	width: 100%;
@@ -247,6 +257,18 @@ footer .bottom-content{
 footer h3{
 	padding-bottom: 16px; 
 }
+.bottom-content.second p{
+	text-decoration: underline;
+}
+.bottom-content input{
+	background: none;
+	border: solid 1px #fff;
+	height: 32px;
+	color:#fff;
+	width: 160px;
+	margin-bottom: 16px;
+}
+
 /******************* Media Queries max-width:800********************/
 /*************************************************/
 
@@ -295,9 +317,7 @@ footer .bottom-content{
 	padding-top:24px;
 	text-align: center;	
 }
-footer .bottom-content:after{
 
-}
 .footer-top{
 	align-items: center;
 	padding-top: 24px;
@@ -308,7 +328,6 @@ footer .bottom-content:after{
 .footer-bottom:after{
 	border-bottom: 0;
 }
-
 
 }
 

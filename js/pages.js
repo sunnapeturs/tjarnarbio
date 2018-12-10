@@ -7,7 +7,7 @@ var templates ={
 					<ul class="top-nav">
 						<li onclick="showEvents()" id="syningar-nav" class="desktop"><a href="#events">Sýningar</a></li>
 						<li onclick="showCalendar()" id="calendar-nav"class="desktop"><a href="#calendar">Dagatal</a></li>
-						<li onclick="showSingleEvent()" class="desktop"><a href="#event">Tjarnarkortin</a></li>					
+						<li class="desktop"><a href="#event">Tjarnarkortin</a></li>					
 						<li class="desktop"><a href="">Um okkur</a></li>
 						<li class="desktop"><a href="">Eng</a></li>
 						<li class="desktop"><input onkeydown="search()" id="searchInput" type="text" name="txt" placeholder="Leit"></li>
@@ -53,7 +53,7 @@ var templates ={
 					<p>midasala@tjarnarbio.is</p>
 					<p>eða hafðu samband<br>Facebook</p>
 				</div>
-				<div class="bottom-content">
+				<div class="bottom-content second">
 					<h3>Gott að vita</h3>
 					<p>Aðgengi hjólastóla</p>
 					<p>Bílastæði við Tjarnarbíó</p>
@@ -61,7 +61,7 @@ var templates ={
 				</div>
 				<div class="bottom-content">
 					<h3>Skráðu þig á póstlistan</h3>
-					<input type="text" name="email" value="Email">
+					<input type="text" name="email" placeholder="Email">
 					<p><span>tjarnarbio@tjarnarbio.is<span></p>
 				</div>
 			</div>
@@ -137,7 +137,8 @@ var templates ={
 		</div`,
 
 	searchResult:`
-		<div class="header-banner"></div>
+		<div class="header-banner">
+		</div>
 		<div class="syningar">
 			<div class="cards-frontpage-container">
 				<h3>Leit</h3>

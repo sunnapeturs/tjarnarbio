@@ -15,6 +15,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 	height:100vh;	
+	position: relative;
 }
 .hero-content{
 	width: 70%;
@@ -32,7 +33,9 @@ body{
 /*icond Örin*/
 section .fa-angle-down{
 	color: #fff;
-	font-size: 20px;
+	font-size: 24px;
+	position: absolute;
+	bottom: 15%;
 }
 /* ALLAR HERO myndir*/
 .hero-ad.one{
@@ -95,7 +98,7 @@ section .fa-angle-down{
 	content:'';
 	width: 40%;
 	border-bottom: solid 1px #AF1F44;
-	top:15%;	
+	top:10%;	
 }
 .hero-ad-content.kaupa-btn{
 	padding-top: 40px;
@@ -119,6 +122,7 @@ section .fa-angle-down{
 	justify-content: flex-start;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom: 16px;
 }
 .card{
 	width: 320px;
@@ -130,6 +134,7 @@ section .fa-angle-down{
 	width:100%;
 	height:100%;
 	position: relative;
+	object-fit: cover;
 }
 .hover-slide{
 	background: rgba(0, 0, 0, 0.6);
@@ -140,8 +145,31 @@ section .fa-angle-down{
 	left: 0;
 	opacity: 0;
 }
+.hover-slide .card-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+}
+.hover-slide .card-info p{
+	font-size: 24px;
+	font-weight: 300;
+	font-family: 'Work Sans', sans-serif;
+	margin-bottom: 40px;
+	color: #fff;
+	text-align: left;
+	padding-left: 24px;
+}
 .hover-slide:hover{
 	opacity: 1;
+}
+.hover-slide .kaupa-btn{
+	position: absolute;
+	top:0;
+	right:0;
+	margin-top: 0;
 }
 .card h4{
 	position: absolute;
@@ -155,9 +183,15 @@ section .fa-angle-down{
 	text-align: center;
 }
 /**** Tjarnarbarinn ******/
+.tjarnabarinn-container h2{
+	font-size: 50px;
+}
 .tjarnarbarinn-img{
 	width: 480px; 
 	height: 704px;
+}
+.hero-ad-content span{
+	color:#AF1F44;
 }
 .tjarnabarinn-container{
 	display: flex;
@@ -190,6 +224,9 @@ section .fa-angle-down{
 .syningar-nav div:hover,.syning-active-btn,.vidburdir-active-btn,.leikar-active-btn{
 	color:#AF1F44;
 }
+.syninga-btn-container button.kaupa-btn{
+	margin-top:0;
+}
 
 /******************* Dagatal ********************/
 /*************************************************/
@@ -198,6 +235,7 @@ section .fa-angle-down{
 	width: 80%;
 	margin: 0 auto;
 	padding-top: 80px;
+	padding-bottom: 80px;
 }
 .calendar-filter-container{
 	width: 100%;
@@ -515,20 +553,31 @@ li div .active{
 		width: 90%;
 		margin: 0 auto;	
 	}
+	.texti-med-linu:after{
+		position: absolute;
+		content:'';
+		width: 0%;
+		border-bottom: solid 0px #AF1F44;
+		top:10%;	
+}
 	/*Cards*/
 	.cards-frontpage-container{
 		width: 95%;
 	}
-
 	.cards-container{
 		width: 100%;
 	}
-
 	.cards-container .card{
 		width: 160px;
 		height: 240px;
+		margin:8px;
 	}
-
+	.card h4,.hover-slide .card-info p{
+		font-size: 16px;
+		bottom: 16px;
+		left:16px;
+		margin-bottom: 0;
+	}
 	.cards-container img{
 		width: 100%;
 		height: 100%;
@@ -543,7 +592,7 @@ li div .active{
 		left: 0;
 	}
 	.calendar-container{
-		width: 95%;
+		width: 98%;
 	}
 	.show-info{
 		width: 90%;
@@ -603,10 +652,36 @@ li div .active{
 		margin-right:0;
 		width: 100%;
     	height: auto;
-}
+    	object-fit: cover;
 	}
 	.panel-content-holder button.kaupa-btn{
 		margin-top:24px;
 	}
-
-}
+	.syningar-nav h3{
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+	/****** Valin sýning *********/
+	.hero-valin-syning .hero-info{
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		height: 20%;
+	}
+	.lina-1{
+		height: 0;
+	}
+	.credit-list{
+		display: none;
+	}
+	.content-box3 button{
+		float: none;
+		margin: 0 auto;
+	}
+	.img-display-container{
+		padding-top: 40px;
+	}
+	.mySlides{
+		width: 100%;
+	}
+}	

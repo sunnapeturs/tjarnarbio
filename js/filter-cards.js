@@ -1,5 +1,4 @@
 function doEventsJs() {
-
 //Cards
 var cardContainer = document.querySelector('.cards-container');
 var iSyninguBtn = document.querySelector('.i-syningu');
@@ -25,8 +24,7 @@ var show_focus = "now_showing";
 	leikarBtn.onclick = function(){
 		leikarBtn.classList.add("leikar-active-btn");
 		iSyninguBtn.classList.remove("syning-active-btn");
-		vidburdirBtn.classList.remove("vidburdir-active-btn");
-		
+		vidburdirBtn.classList.remove("vidburdir-active-btn");	
 		show_focus = "all";
 		show()
 	}
@@ -37,43 +35,60 @@ var show_focus = "now_showing";
 			for(var i = 0; i < cards.length; i++){		
 				if(cards[i].now_showing){
 					cardContainer.innerHTML +=`
-							<div class="card i-syningu">		
-									<img src="${cards[i].img}">
-									<div class="hover-slide"></div>		
-									<h4>${cards[i].names}</h4>			
-							</div>
-					`
-					}	
+				<div class="card">
+					<img src="${cards[i].img}">
+					<div class="hover-slide">
+						<button class="kaupa-btn">Kaupa miða</button>
+						<div class="card-info">
+							<p>${cards[i].leikfelag}</p>
+							<p>${cards[i].date}</p>
+							<p>${cards[i].price}</p>
+						</div>
+					</div>
+					<h4>${cards[i].names}</h4>			
+				</div>`
+				}	
 			}
 		}else if(show_focus==="events"){
 			for(var i = 0; i < cards.length; i++){		
 				if(cards[i].other_event){
 					cardContainer.innerHTML +=`
-							<div class="card i-syningu">		
-									<img src="${cards[i].img}">
-									<div class="hover-slide"></div>		
-									<h4>${cards[i].names}</h4>			
-							</div>
-					`
-					}	
+				<div class="card">
+					<img src="${cards[i].img}">
+					<div class="hover-slide">
+						<button class="kaupa-btn">Kaupa miða</button>
+						<div class="card-info">
+							<p>${cards[i].leikfelag}</p>
+							<p>${cards[i].date}</p>
+							<p>${cards[i].price}</p>
+						</div>
+					</div>
+					<h4>${cards[i].names}</h4>			
+				</div>`
+				}	
 			}
 		} else {
 			for(var i = 0; i < cards.length; i++){		
 				if(!(cards[i].other_event)){
 					cardContainer.innerHTML +=`
-							<div class="card i-syningu">		
-									<img src="${cards[i].img}">
-									<div class="hover-slide"></div>		
-									<h4>${cards[i].names}</h4>			
+					<div class="card">
+						<img src="${cards[i].img}">
+						<div class="hover-slide">
+							<button class="kaupa-btn">Kaupa miða</button>
+							<div class="card-info">
+								<p>${cards[i].leikfelag}</p>
+								<p>${cards[i].date}</p>
+								<p>${cards[i].price}</p>
 							</div>
-					`
-					}	
+						</div>
+						<h4>${cards[i].names}</h4>			
+					</div>`
+				}	
 			}	
 		}	
 	}
 // first load
 show()
-
 }
 
 
