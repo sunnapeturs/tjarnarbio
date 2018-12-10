@@ -684,4 +684,10 @@ li div .active{
 	.mySlides{
 		width: 100%;
 	}
+	.syninga-info-container{
+		width: 100%;
+	}
+	.syninga-info-content{
+		width: 90%;
+	}
 }	
